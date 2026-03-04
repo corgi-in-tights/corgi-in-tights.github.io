@@ -1,0 +1,118 @@
+baseURL: https://reyaan.dev/
+languageCode: en-us
+title: reyaan.dev
+theme: PaperMod
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: reyaan.dev
+  description: "My personal website, where I share a bit about myself and maybe some other stuff."
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Reyaan C.
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    disableFingerprinting: false
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+
+  label:
+    text: "reyaan.dev"
+    icon: /favicon-32x32.png
+    iconHeight: 35
+
+  homeInfoParams:
+    Content: |
+      <img class="pixel-art" src="/portrait_upscale.png" width=500  alt="portrait">
+      <br>
+
+      Hi, I'm Reyaan, I like exploring new fields and mastering little things.
+
+      <br>
+      I have a background in software development, but I'm also interested in other areas like design and writing. This website is a place where I share my thoughts, projects, and anything else that I find interesting.
+      
+      <img class="pixel-art" src="/working_on_upscale.png" width=400 alt="portrait" style="margin-top: 20px;margin-bottom: 20px;">
+
+      Currently I'm focusing on learning about K8s and etcd via a homelab setup, it has been... arduous, but worthwhile. Though to be honest, that might just be my stubbornness getting the best of me.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/reyaan-c-6a1947224/"
+    - name: github
+      url: "https://github.com/corgi-in-tights"
+    - name: reddit
+      url: "https://reddit.com/user/corgi-in-tights"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 20
+    - identifier: projects
+      name: projects
+      url: /projects/
+      weight: 20
+    - identifier: write
+      name: write
+      url: /write/
+      weight: 20
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
